@@ -3,5 +3,5 @@ color = "#ff50b3"
 company_id = "xxx"
 company_url = "xxx"
 
-[[params.mods.bundles]]
-key = "salonized"
+[params.mods.bundles]
+salonized = true
