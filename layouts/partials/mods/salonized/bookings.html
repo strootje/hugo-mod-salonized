@@ -1,12 +1,13 @@
 {{- $scope := index . 0 -}}
 {{- $inline := index . 1 | default false -}}
-{{- $width := index . 2 | default 660 -}}
 
-{{- with $scope.Site.Params.mods.salonized -}}
-	{{- $color := .color -}}
+{{- with $scope.Site.Params.Salonized -}}
+	{{- $color := .Color -}}
+	{{- $companyId := .CompanyId -}}
+	{{- $width := 240 -}}
 
 	{{- if $inline -}}
-		<noscript>{{- T "salonized.bookings.no_script" $scope -}}</noscript>
+		<noscript>{{- T "mods.salonized.bookings.no_script" $scope -}}</noscript>
 	{{- end -}}
 
 

@@ -1,3 +1,3 @@
-module git.strooware.nl/hugo-mod-salonized
+module git.strooware.nl/hugomods/salonized
 
-go 1.20
+go 1.21.5
