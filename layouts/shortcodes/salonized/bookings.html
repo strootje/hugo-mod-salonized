@@ -1,2 +1,3 @@
 {{- $inline := .Get "inline" | default true -}}
-{{- partial "salonized/bookings" (slice . $inline) -}}
+{{- $width := .Get "width" | default 500 -}}
+{{- partial "mods/salonized/bookings" (slice . $inline $width) -}}

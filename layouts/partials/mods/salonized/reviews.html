@@ -1,14 +1,11 @@
 {{- $scope := index . 0 -}}
 {{- $inline := index . 1 | default false -}}
 
-{{- with $scope.Site.Params.mods.salonized -}}
+{{- with $scope.Site.Params.Salonized -}}
 	{{- if $inline -}}
 		<noscript>{{- T "mods.salonized.reviews.no_script" $scope -}}</noscript>
 		<div class="salonized-reviews"></div>
 	{{- else -}}
-		<div
-			class="salonized-reviews-mini"
-			data-link="https://{{- .company_url -}}.salonized.com/reviews"
-		></div>
+		<div class="salonized-reviews-mini" data-link="https://{{- .companyurl -}}.salonized.com/reviews"></div>
 	{{- end -}}
 {{- end -}}

@@ -1,10 +1,10 @@
 {{- $scope := index . 0 -}}
 {{- $inline := index . 1 | default false -}}
+{{- $width := index . 2 | default 500 -}}
 
 {{- with $scope.Site.Params.Salonized -}}
 	{{- $color := .Color -}}
 	{{- $companyId := .CompanyId -}}
-	{{- $width := 240 -}}
 
 	{{- if $inline -}}
 		<noscript>{{- T "mods.salonized.bookings.no_script" $scope -}}</noscript>
@@ -13,10 +13,10 @@
 
 	<div
 		class="salonized-booking"
-		data-company="{{- .company_id -}}"
+		data-company="{{- $companyId -}}"
 		data-language="{{- $scope.Site.Language -}}"
 		data-inline="{{- $inline -}}"
-		data-width="{{- $width -}}"
 		data-color="{{- $color -}}"
+		data-width="{{- $width -}}"
 	></div>
 {{- end -}}

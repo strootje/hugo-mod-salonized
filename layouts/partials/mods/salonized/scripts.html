@@ -1,15 +1,8 @@
-{{- with .Site.Params.Salonized -}}
-	<script src="https://static-widget.salonized.com/loader.js"></script>
-{{- end -}}
-
 {{- $scope := . -}}
-{{- with .Site.Params.mods.salonized -}}
-
-	{{- if not ($scope.HasShortcode "salonized/bookings") -}}
-		{{- partial "salonized/bookings" (slice $scope) -}}
-	{{- end -}}
+{{- with .Site.Params.Salonized -}}
+	<script src="https://static-widget.salonized.com/loader.js" defer></script>
 
 	{{- if ($scope.HasShortcode "salonized/reviews") -}}
-		<script data-name="salonized" src="https://cdn.salonized.com/widget.js" data-microsite-url="https://{{- .company_url -}}.salonized.com"></script>
+		<script data-name="salonized" src="https://cdn.salonized.com/widget.js" data-microsite-url="https://{{- .CompanyUrl -}}.salonized.com" defer></script>
 	{{- end -}}
 {{- end -}}
